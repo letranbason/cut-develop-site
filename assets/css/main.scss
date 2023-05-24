@@ -1,0 +1,246 @@
+@import '_var.scss';
+
+body{
+    font-family: $font-family;
+}
+header{
+    background: url('../images/Maskheader.png') ;
+    background-color: #005FBE;
+    .logo{
+        padding:0 23px 0 0;
+    }
+    .collapse{
+        .text{
+            color: $primary-color;
+            .num1{
+                font-style: normal;
+                font-weight: 500;
+                font-size: 15px;
+                line-height: 18px;
+            }
+            .num2{
+                font-style: normal;
+                font-weight: 900;
+                font-size: 22px;
+                line-height: 26px;
+            }
+            .num3{
+                font-style: normal;
+                font-weight: 500;
+                font-size: 15px;
+                line-height: 18px;  
+                color:#1BDEF2;
+            }
+        }
+    }
+    .contact{
+        .list{
+            color: $primary-color;
+            list-style: none;
+            gap: 10px;
+            color: $primary-color;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 15px;
+            
+            a{
+                text-decoration: none;
+                color: $primary-color;
+            }
+            li:not(:last-child){
+                margin-right: 20px; 
+            }
+            li:last-child{
+                position: relative;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    right: -5px; /* Adjust the desired position of the line */
+                    transform: translateY(-50%);
+                    height: 80%;
+                    width: 1px;
+                    color: $primary-color;
+                }
+            }
+        }
+        form{
+            .form-control{
+                background: #4C85BD;
+                border-color: #4C85BD;
+                &::placeholder{
+                    color: $primary-color;
+                }
+            }
+            .btn{
+                background: #00468B;
+            }
+        }
+    }
+}
+.menu{
+    height: auto;
+    background: #0063C6;
+    .list{
+        padding: 0;
+        list-style: none;
+        li{
+            margin-right: 20px;
+            margin-bottom: 10px;
+            position: relative;
+            a{
+                font-weight: 700;
+                font-size: 15px;
+                line-height: 18px;
+                text-decoration: none;
+                color: $primary-color;
+            }
+            :not(:last-child)::after{
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                width: 1px;
+                height: 80%;
+                background-color: #000;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                height: 20px;
+                width: 1px;
+                top: 0;
+                left: 0;
+                color: #000;
+            }
+        }
+    }
+
+}
+
+.content-site{
+    .title{
+        padding-top: 48px;
+        padding-bottom: 98px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 42px;
+        color: #0052A4;
+        .custom{
+            width: 80px;
+            height: 6px;
+            background: #1ADDF1;
+            margin: 0;
+        }
+    }
+    .selection{
+        
+        .tag{
+            padding: 8px 0;
+            button{
+                padding: 11px 0 11px 20px;
+                background: #F1F1F1;
+                width: 100%;
+                text-align: start;
+                border: none;
+                text-decoration: none;
+                position: relative;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 6px;
+                    height: 100%;
+                    background-color: #1ADDF1; /* Change the color here */
+                    opacity: 0;
+                    font-weight: bold;
+                    transition: opacity 0.2s;
+                }
+                &.active{
+                    font-weight: bold;
+                    &::after{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    .head-title{
+        h2{
+            color: #23262B;
+            font-weight: 800;
+            font-size: 28px;
+            line-height: 33px;
+        }
+    }
+    .description{
+        padding: 26px 0 76px 0;
+    }
+}
+
+footer{
+    background: url('../images/Mask.png');
+    background-color: #005FBE;
+    position: relative;
+    .collapse{
+        .text{
+            color: $primary-color;
+            .num1{
+                font-style: normal;
+                font-weight: 500;
+                font-size: 15px;
+                line-height: 18px;
+                @extend .num1;
+            }
+            .num2{
+                font-style: normal;
+                font-weight: 900;
+                font-size: 22px;
+                line-height: 26px;
+                @extend .num2;
+            }
+            .num3{
+                font-style: normal;
+                font-weight: 500;
+                font-size: 15px;
+                line-height: 18px;  
+                color:#1BDEF2;
+                @extend .num3;
+            }
+        }
+    }
+    ul{
+        li{
+            color: $primary-color;
+        }
+    }
+    .title{
+        color: $primary-color;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 20px;
+    }
+    .below{
+        width: 100%;
+        background: #0057AE;
+        .copyright{
+            p{
+                margin: 0;
+                color: $primary-color;
+            }
+        }
+    }
+    @media (max-width: 768px){
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        .row{
+            .col{
+                flex: unset;
+            }
+        }
+    }
+}

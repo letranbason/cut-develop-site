@@ -1,0 +1,265 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Black.woff2") format("woff2"), url("../fonts/Roboto-Black.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Medium.woff2") format("woff2"), url("../fonts/Roboto-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+.var1 {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.var2 {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  background: url("../images/Maskheader.png");
+  background-color: #005FBE;
+}
+header .logo {
+  padding: 0 23px 0 0;
+}
+header .collapse .text {
+  color: white;
+}
+header .collapse .text .num1 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+}
+header .collapse .text .num2 {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 26px;
+}
+header .collapse .text .num3 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #1BDEF2;
+}
+header .contact .list {
+  color: white;
+  list-style: none;
+  gap: 10px;
+  color: white;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+}
+header .contact .list a {
+  text-decoration: none;
+  color: white;
+}
+header .contact .list li:not(:last-child) {
+  margin-right: 20px;
+}
+header .contact .list li:last-child {
+  position: relative;
+}
+header .contact .list li:last-child::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -5px; /* Adjust the desired position of the line */
+  transform: translateY(-50%);
+  height: 80%;
+  width: 1px;
+  color: white;
+}
+header .contact form .form-control {
+  background: #4C85BD;
+  border-color: #4C85BD;
+}
+header .contact form .form-control::-moz-placeholder {
+  color: white;
+}
+header .contact form .form-control::placeholder {
+  color: white;
+}
+header .contact form .btn {
+  background: #00468B;
+}
+
+.menu {
+  height: auto;
+  background: #0063C6;
+}
+.menu .list {
+  padding: 0;
+  list-style: none;
+}
+.menu .list li {
+  margin-right: 20px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.menu .list li a {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  text-decoration: none;
+  color: white;
+}
+.menu .list li :not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 80%;
+  background-color: #000;
+}
+.menu .list li::after {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 1px;
+  top: 0;
+  left: 0;
+  color: #000;
+}
+
+.content-site .title {
+  padding-top: 48px;
+  padding-bottom: 98px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 42px;
+  color: #0052A4;
+}
+.content-site .title .custom {
+  width: 80px;
+  height: 6px;
+  background: #1ADDF1;
+  margin: 0;
+}
+.content-site .selection .tag {
+  padding: 8px 0;
+}
+.content-site .selection .tag button {
+  padding: 11px 0 11px 20px;
+  background: #F1F1F1;
+  width: 100%;
+  text-align: start;
+  border: none;
+  text-decoration: none;
+  position: relative;
+}
+.content-site .selection .tag button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background-color: #1ADDF1; /* Change the color here */
+  opacity: 0;
+  font-weight: bold;
+  transition: opacity 0.2s;
+}
+.content-site .selection .tag button.active {
+  font-weight: bold;
+}
+.content-site .selection .tag button.active::after {
+  opacity: 1;
+}
+.content-site .head-title h2 {
+  color: #23262B;
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 33px;
+}
+.content-site .description {
+  padding: 26px 0 76px 0;
+}
+
+footer {
+  background: url("../images/Mask.png");
+  background-color: #005FBE;
+  position: relative;
+}
+footer .collapse .text {
+  color: white;
+}
+footer .collapse .text .num1 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+}
+footer .collapse .text .num2 {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 26px;
+}
+footer .collapse .text .num3 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #1BDEF2;
+}
+footer ul li {
+  color: white;
+}
+footer .title {
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+}
+footer .below {
+  width: 100%;
+  background: #0057AE;
+}
+footer .below .copyright p {
+  margin: 0;
+  color: white;
+}
+@media (max-width: 768px) {
+  footer {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+  footer .row .col {
+    flex: unset;
+  }
+}/*# sourceMappingURL=main.css.map */
